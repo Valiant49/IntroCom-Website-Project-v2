@@ -1,0 +1,74 @@
+h1, h3, ul, li, p {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+body{
+    margin: 0px
+}
+
+#navbar {
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.primary-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px
+}
+
+li {
+    display: inline-flex;
+    float: left;
+    margin-right: 50px;
+}
+
+li a {
+    display: block;
+    text-align:center;
+    text-decoration: none;
+    margin: 30px;   
+}
+
+#brand-wrapper {
+    margin: 30px;
+    margin-right: 60px;
+}
+
+#text-holder {
+    color: white;
+    padding: 22em;
+    background-color: rgba(26, 35, 131, 0.5);
+    background-image: url(../imgs/vertical-shot-mountains-covered-greenery-car-16by9.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#hero-cta-btn {
+    background-color: rgb(255, 109, 61);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.container {
+    padding: 28em;
+}
