@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/index.css">
         <title>Tambutso Auto</title>
     </head>
     <body>
         <div id="homapage">
             <main>
-                <nav id="navbar">
+                <nav class="container" id="navbar">
                     <div class="primary-nav">
                         <div id="brand-wrapper">
                             <p id="brand-name">TAMBUTSO</p>
                         </div>
                         <div id="navigations">
                             <ul>
-                                <li><a>Home</a></li>
-                                <li><a>Selection</a></li>
-                                <li><a>Services</a></li>
-                                <li><a>About</a></li>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a>New Cars</a></li>
+                                <li><a>Used Cars</a></li>
+                                <li><a href="./services.html">Services</a></li>
+                                <li><a href="./about.html">About</a></li>
+                                <li><a id="contact-us-btn" href="./contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <section class="section" id="hero-section">
+                <section class="container" id="hero-section">
                     <div id="text-holder">
-                        <h1>Find your Perfect Ride</h1>
-                        <h3>Local Inventory, Personalized Service</h3>
-                        <button id="hero-cta-btn"type="button">Find Your Perfect Match</button>
+                        <h1 id="hero-title">Find your Perfect Ride</h1>
+                        <h3 id="hero-subtitle">Local Inventory, Personalized Service</h3>
+                        <button id="hero-cta-btn"type="button"><b>Find Your Perfect Match</b></button>
                     </div>
                     <div id="hero-bg-img"></div>
                 </section>
 
                 <section class="section" id="new-cars">
-                    <div class="container">
+                    <div>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi tenetur, non minus molestiae voluptas odio tempore adipisci fugiat. Nobis, ratione. Natus excepturi nesciunt rerum dolores distinctio harum ducimus, cum sapiente?</p>
                     </div>
                 </section>
@@ -41,5 +44,22 @@
                 </section>
             </main>
         </div>
+
+        <!--<script>
+            const toggleButton = document.querySelector('.sidebar-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+        
+            toggleButton.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+        
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        </script>-->
+
     </body>
 </html>
