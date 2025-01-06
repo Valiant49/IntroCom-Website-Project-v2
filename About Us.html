@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css"> <!--reference for navigation and @media quieries-->
+    <link rel="stylesheet" href="./css/about.css"> <!--css for this page layout-->
+    <title>About Us</title>
+</head>
+<body>
+    <nav class="container" id="navbar">
+        <div id="brand-wrapper">
+            <p id="brand-name">TAMBUTSO</p>
+        </div>
+        
+        <input type="checkbox" id="sidebar-active">
+        <label id="hamburger-menu" for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+
+        <label id="overlay" for="sidebar-active"></label>
+        <div id="navigations">
+            <label id="x-mark" for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+                <a id="home-link" href="./index.html">Home</a>
+                <a>New Cars</a>
+                <a>Used Cars</a>
+                <a href="./services.html">Services</a>
+                <a href="./about.html">About</a>
+                <a id="contact-us-btn" href="./contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="container header" id="about-header">
+        <h1>About Tambutso Auto</h1>
+    </div>
+
+    <div class="container content-area">
+        <p>
+            We at Tambutso, help you bring your automotive dreams to reality. Out platform serves as  your comprehensive destination for exploring both new and pre-owned vehicles in [City].
+            We understand that choosing a car is more than just a transaction - it's about finding the perfect match for your lifestyle and needs. 
+        </p>
+        </br>
+        <p>
+        Our dedicated team with years of automotive expertise provides you with:</br>
+            <ul>
+                <li>transparent and detailed car information</li>
+                <li>personalized vehicle recommendations</li>
+                <li>simple process for car purchase</li>
+            </ul>
+        </p>
+        </br>
+        <p>
+            We're not just another car website. We're your automotive partners, committed to making your car-buying journey informative, enjoyable, and stress-free. Whether you're a first-time buyer or an experienced enthusiast, we provide the tools and information you need to make confident decisions about your next vehicle.
+        </p>
+    </div>
+
+    <section>
+        <form>
+            <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="input_name" placeholder="Name">
+            </div>
+        </br>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="input_email" placeholder="Email">
+            </div>
+        </br>
+            <div>
+                <label for="contact-number">Contact Number:</label>
+                <input type="number" id="contact-number" name="input_contact-number" placeholder="Contact Number">
+            </div>
+        </br>
+            <div>
+                <label for="message">Message:</label>
+                <input type="text" id="message" name="input_message" placeholder="Message me!">
+            </div>
+
+
+            
+        </form>
+    </section>
+
+</body>
+</html>

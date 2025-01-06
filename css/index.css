@@ -1,4 +1,101 @@
+:root{
+    --color-1: #0A1128;
+    --color-2: #001F54;
+    --color-2_1: #275ebd;
 
+    --color-3: #034078;
+    --color-4: #1282A2;
+    --color-5: #FEFCFB;
+
+    --text-color-black: rgb(0, 0, 0);
+    --text-color-white: rgb(255, 255, 255);
+
+    --cta-btn-color: rgb(255, 109, 61);
+
+
+    --hover-color-on-white: rgb(139, 139, 139);
+    --cta-btn-hover-color: rgb(185, 70, 32);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+
+}
+
+#hamburger-menu {
+    flex-shrink: 0; /* Ensure the menu icon doesn't shrink */
+}
+
+#brand-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#brand-name {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#navigations {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*#brand-name { color: var(--text-color);}*/
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    background-color: var(--hover-color-on-white);
+
+}
+
+nav #home-link {
+    margin-right: auto;
+}
+
+nav svg {
+    fill: var(--text-color);
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+    
+    display: none;
+}
+
+/*Breakpoints*/
 
 .container {
     width: 100%;
@@ -7,120 +104,431 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+
+
   
   /* xs */
-  @media (min-width: 475px) {
+  @media (min-width: 10px) /*475px x 812px*/ {
     .container {
       max-width: 475px;
+      padding: 0;
     }
 
-    #hero-title {
-        font-size: 3rem;
+    #navigations{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        background-color: var(--color-5);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.75s ease-out;
+      }
+
+      nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+      }
+
+      #contact-us-btn {
+        background-color: var(--cta-btn-color);
+        border: none;
+        border-radius: 5px;
+        padding: 14px 28px;
+        text-align: center;
+        text-decoration: none; 
+        margin: 0;
+        }
+
+    #contact-us-btn:hover {
+        background-color: var(--cta-btn-hover-color);
     }
 
-  }
+      .open-sidebar-button, .close-sidebar-button{
+        padding: 20px;
+        display: block;
+        }
+
+      #sidebar-active:checked ~ #navigations{
+        right: 0;
+        }
+
+      #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        }
+
+      #text-holder {
+        padding: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: overlay;
+        background-image: url(../imgs/car-repair/9by16_small_kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
+        background-color: rgba(0, 0, 0, 0.473);
+
+        color: var(--color-5); /* Ensure text contrasts with the background */
+        text-align: center; /* Center align text */
+        padding-top: 10rem; /* Add some padding */
+        padding-bottom: 10rem;
+        font-size: 1.5rem; /* Adjust font size as needed */}
+
+        #hero-title{
+            font-size: 2.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        #hero-subtitle {
+            font-size: 0.9em;
+            padding-bottom: 1.5rem;
+            
+        }
+
+        #hero-cta-btn {
+            margin-bottom: 12.5rem;
+            background-color: var(--cta-btn-color);
+            border: none;
+            border-radius: 5px;
+            color: var(--text-color-white);
+            padding: 14px 28px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        #hero-cta-btn:hover {
+            background-color: var(--cta-btn-hover-color);
+        }
+
+        /* Container styles */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            /*padding: 2rem 1rem;*/
+        }
+
+        /* Section title */
+        .container h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        /* Card grid layout */
+        .card-holder {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            position: relative;
+            padding-bottom: 3rem; /* Space for view more link */
+        }
+
+        /* Individual card styling */
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Card image */
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Card content */
+        .card h3 {
+            padding: 1rem 1.5rem 0.5rem;
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        /* "Includes:" text */
+        .card h3 + :not(ul) {
+            padding: 0 1.5rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* List styling */
+        .card ul {
+            list-style: none;
+            padding: 0.5rem 1.5rem 4rem;
+            margin: 0;
+            color: #666;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .card ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        /* Button styling */
+        .card .button {
+            position: absolute;
+            bottom: 1rem;
+            right: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            background: var(--cta-btn-color);
+            color: white;
+        }
+
+        /* View more link */
+        .view-more {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-decoration: none;
+            background-color: var(--cta-btn-color);
+            color: var(--text-color-white);
+            font-weight: 500;
+            padding: 12px;
+        }
+
+
+    }
+   
+
   
   /* sm */
-  @media (min-width: 640px) {
+  @media (min-width: 640px) /*640px x 1136px*/ {
     .container {
-      max-width: 640px;
+        max-width: 640px;
     }
 
-    .primary-nav {
-        padding: 0 1.5rem;
-    }
-    
     #text-holder {
         padding: 15em;
     }
 
-  }
+    #navigations{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        background-color: var(--color-5);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.75s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        padding: 20px;
+        display: block;
+    }
+    #sidebar-active:checked ~ #navigations{
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    #text-holder {
+        padding: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: overlay;
+        background-image: url(../imgs/car-repair/9by16_small_kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
+        background-color: rgba(0, 0, 0, 0.473);
+
+        color: var(--color-5); /* Ensure text contrasts with the background */
+        text-align: center; /* Center align text */
+        padding-top: 10rem; /* Add some padding */
+        padding-bottom: 10rem;
+        font-size: 1.5rem; /* Adjust font size as needed */
+
+    }
+
+    #hero-title{
+        font-size: 3.2rem;
+        padding-top: 8rem;
+        padding-bottom: 0.5rem;
+    }
+
+    #hero-subtitle {
+        font-size: 1.2em;
+        padding-bottom: 1.5rem;
+        
+    }
+
+    #hero-cta-btn {
+        margin-bottom: 25.5rem;
+        background-color: var(--cta-btn-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color-white);
+        padding: 14px 28px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    
+    #hero-cta-btn:hover {
+        background-color: var(--cta-btn-hover-color);
+    }
+
+}
+
   
   /* md */
-  @media (min-width: 768px) {
+  @media (min-width: 768px) /*768px x 1280px*/ {
     .container {
       max-width: 768px;
     }
 
     #hero-title {
-        font-size: 3.5rem;
+        font-size: 5.5rem;
     }
     
     #hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 3.2rem;
     }
 
   }
   
   /* lg */
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 1024px;
-    }
-
-    .primary-nav {
-        padding: 0 2rem;
-    }
-    
-    #text-holder {
-        padding: 21em;
-    }
-    
-    #hero-title {
-        font-size: 4rem;
-    }
-
-  }
-  
-  /* xl */
-  @media (min-width: 1280px) {
+  @media (min-width: 1024px) /*1024px x 768px*/ {
     .container {
       max-width: 1280px;
+      padding-left: 0;
     }
 
-    h1, h3, ul, li, p {
-        font-family:Arial, Helvetica, sans-serif
-    }
-    
-    body{
-        margin: 0px
-    }
-    
     #navbar {
-        /*position: fixed;*/
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    .primary-nav {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 2rem;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-around; /* Spread logo and navigation */
+        height: 60px;
     }
-    
-    ul {
-        list-style-type: none;
-        margin: 0px
+
+    #brand-wrapper {
+        position: initial;
+        display: block; /* Ensure it's visible */
+        margin: 0; /* Remove any margin adjustments from mobile */
+        transform: none;
     }
-    
-    li {
-        display: inline-flex;
-        float: left;
-        margin-right: 0px;
+
+    #contact-us-btn {
+        background-color: var(--cta-btn-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color-white);
+        padding: 14px 28px;
+        text-align: center;
+        text-decoration: none; 
+        margin: 0;
     }
-    
-    li a {
-        color: black;
-        display: block;
-        text-align:center;
-        text-decoration: none;
-        margin: 14px 28px;   
+
+    #navigations {
+        flex-direction: row; /* Change navigation to horizontal layout */
+        justify-content: flex-start; /* Align items to the left */
+        align-items: center; /* Center navigation links vertically */
+        position: static; /* Remove fixed positioning for sidebar */
+        width: auto; /* Adjust width */
+        background-color: transparent; /* Remove background for sidebar */
+        box-shadow: none; /* Remove sidebar shadow */
+    }
+
+    nav a {
+        padding: 1rem 1.9rem; /* Add horizontal spacing between links */
+        height: auto; /* Ensure proper vertical alignment */
+        width: auto; /* Reset from mobile full width */
+        justify-content: center; /* Center align text in links */
+    }
+
+    .open-sidebar-button, .close-sidebar-button {
+        display: none; /* Hide hamburger and close button */
+    }
+
+    #text-holder {
+        padding: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: overlay;
+        background-image: url(../imgs/car-repair/medium_kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
+        background-color: rgba(0, 0, 0, 0.473);
+
+        color: var(--color-5); /* Ensure text contrasts with the background */
+        text-align: center; /* Center align text */
+        padding-top: 10rem; /* Add some padding */
+        padding-bottom: 10rem;
+        font-size: 1.5rem; /* Adjust font size as needed */
+        }
+        #hero-title{
+            font-size: 3.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        #hero-subtitle {
+            font-size: 1.4em;
+            padding-bottom: 1.5rem;
+        }
+
+        #hero-cta-btn {
+            margin-bottom: 12.5rem;
+            background-color: var(--cta-btn-color);
+            border: none;
+            border-radius: 5px;
+            color: var(--text-color-white);
+            padding: 14px 28px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        #hero-cta-btn:hover {
+            background-color: var(--cta-btn-hover-color);
+        }
+
+    }
+
+  
+  /* xl */
+  @media (min-width: 1280px) /*1280px x 720px*/ {
+    .container {
+      max-width: 1280px;
     }
     
     #brand-wrapper {
@@ -129,10 +537,10 @@
     }
     
     #contact-us-btn {
-        background-color: rgb(255, 109, 61);
+        background-color: var(--cta-btn-color);
         border: none;
         border-radius: 5px;
-        color: white;
+        color: var(--text-color-white);
         padding: 14px 28px;
         text-align: center;
         text-decoration: none; 
@@ -140,31 +548,130 @@
     }
     
     #text-holder {
-        color: white;
-        padding: 21em;
-        background-color: rgba(26, 35, 131, 0.5);
-        background-image: url(../imgs/vertical-shot-mountains-covered-greenery-car-16by9.jpg);
+        padding: 0;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-blend-mode: multiply;
+        background-blend-mode: overlay;
+        background-image: url(../imgs/car-repair/medium_kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
+        background-color: rgba(0, 0, 0, 0.473);
+
+        color: var(--color-5); /* Ensure text contrasts with the background */
+        text-align: center; /* Center align text */
+        padding-top: 10rem; /* Add some padding */
+        padding-bottom: 10rem;
+        font-size: 1.5rem; /* Adjust font size as needed */
     }
     
     #hero-title {
         font-size: 4rem;
-        margin: 0;
     }
     
     #hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 2.3rem;
         font-weight: 200;
     }
     
     #hero-cta-btn {
-        background-color: rgb(255, 109, 61);
+        background-color: var(--cta-btn-color);
         border: none;
         border-radius: 5px;
         color: white;
+        padding: 14px 28px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+    
+    #hero-cta-btn:hover {
+        background-color: var(--cta-btn-hover-color);
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) /*1536px x 864px*/ {
+    .container {
+      max-width: 1536px;
+    }
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around; /* Spread logo and navigation */
+        height: 60px;
+    }
+
+    #brand-wrapper {
+        position: initial;
+        display: block; /* Ensure it's visible */
+        margin: 0; /* Remove any margin adjustments from mobile */
+        transform: none;
+    }
+
+    #contact-us-btn {
+        background-color: var(--cta-btn-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color-white);
+        padding: 14px 28px;
+        text-align: center;
+        text-decoration: none; 
+        margin: 0;
+    }
+
+    #navigations {
+        flex-direction: row; /* Change navigation to horizontal layout */
+        justify-content: flex-start; /* Align items to the left */
+        align-items: center; /* Center navigation links vertically */
+        position: static; /* Remove fixed positioning for sidebar */
+        width: auto; /* Adjust width */
+        background-color: transparent; /* Remove background for sidebar */
+        box-shadow: none; /* Remove sidebar shadow */
+    }
+
+    nav a {
+        padding: 1rem 1.9rem; /* Add horizontal spacing between links */
+        height: auto; /* Ensure proper vertical alignment */
+        width: auto; /* Reset from mobile full width */
+        justify-content: center; /* Center align text in links */
+    }
+
+    .open-sidebar-button, .close-sidebar-button {
+        display: none; /* Hide hamburger and close button */
+    }
+
+    #text-holder {
+        padding: 0;
+        background-color: rgba(26, 35, 131, 0.5);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+        background-image: url(../imgs/car-repair/kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
+
+        color: var(--text-color-white); /* Ensure text contrasts with the background */
+        text-align: center; /* Center align text */
+        padding-top: 10rem; /* Add some padding */
+        padding-bottom: 10rem;
+        font-size: 1.5rem; /* Adjust font size as needed */
+        }
+
+    #hero-title{
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+    }
+
+    #hero-subtitle {
+        font-size: 0.9em;
+        padding-bottom: 1.5rem;
+    }
+
+    #hero-cta-btn {
+        margin-bottom: 12.5rem;
+        background-color: var(--cta-btn-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color-white);
         padding: 14px 28px;
         text-align: center;
         text-decoration: none;
@@ -172,7 +679,12 @@
     }
     
     #hero-cta-btn:hover {
-        background-color: rgb(185, 70, 32);
+        background-color: var(--cta-btn-hover-color);
     }
 
-  }
+}
+
+
+
+
+
