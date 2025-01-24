@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-1: #0A1128;
     --color-2: #001F54;
     --color-2_1: #275ebd;
@@ -42,7 +42,8 @@ html {
 }
 
 #hamburger-menu {
-    flex-shrink: 0; /* Ensure the menu icon doesn't shrink */
+    flex-shrink: 0;
+    /* Ensure the menu icon doesn't shrink */
 }
 
 #brand-wrapper {
@@ -70,7 +71,7 @@ html {
 
 /*#brand-name { color: var(--text-color);}*/
 
-nav a{
+nav a {
     height: 100%;
     padding: 0 20px;
     display: flex;
@@ -96,13 +97,18 @@ nav svg {
     display: none;
 }
 
-.open-sidebar-button, .close-sidebar-button {
+.open-sidebar-button,
+.close-sidebar-button {
     display: none;
 }
 
-#hero-section, #services, 
-#why-choose-us, #about,
-#testimonials, #contact, .margin-bottom-50 {
+#hero-section,
+#services,
+#why-choose-us,
+#about,
+#testimonials,
+#contact,
+.margin-bottom-50 {
     margin-bottom: 50px;
 }
 
@@ -148,7 +154,8 @@ h2 {
 .input-field {
     display: flex;
     flex-direction: column;
-    width: 100%;/*------------------------fix margin and padding*/
+    width: 100%;
+    /*------------------------fix margin and padding*/
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -187,18 +194,20 @@ h2 {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-  }
+}
 
 
-  
-  /* xs */
-  @media (min-width: 10px) /*475px x 812px*/ {
+
+/* xs */
+@media (min-width: 10px)
+/*475px x 812px*/
+    {
     .container {
-      max-width: 475px;
-      padding: 0;
+        max-width: 475px;
+        padding: 0;
     }
 
-    #navigations{
+    #navigations {
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
@@ -209,40 +218,41 @@ h2 {
         background-color: var(--color-5);
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.75s ease-out;
-      }
+    }
 
-      nav a{
+    nav a {
         box-sizing: border-box;
         height: auto;
         width: 100%;
         padding: 20px 30px;
         justify-content: flex-start;
-      }
+    }
 
-      #contact-us-btn {
+    #contact-us-btn {
         background-color: var(--cta-btn-color);
         border: none;
         border-radius: 5px;
         padding: 14px 28px;
         text-align: center;
-        text-decoration: none; 
+        text-decoration: none;
         margin: 0;
-        }
+    }
 
     #contact-us-btn:hover {
         background-color: var(--cta-btn-hover-color);
     }
 
-    .open-sidebar-button, .close-sidebar-button{
+    .open-sidebar-button,
+    .close-sidebar-button {
         padding: 20px;
         display: block;
     }
 
-    #sidebar-active:checked ~ #navigations{
+    #sidebar-active:checked~#navigations {
         right: 0;
     }
 
-    #sidebar-active:checked ~ #overlay{
+    #sidebar-active:checked~#overlay {
         height: 100%;
         width: 100%;
         position: fixed;
@@ -260,14 +270,18 @@ h2 {
         background-image: url(../imgs/car-repair/9by16_small_kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
         background-color: rgba(0, 0, 0, 0.473);
 
-        color: var(--color-5); /* Ensure text contrasts with the background */
-        text-align: center; /* Center align text */
-        padding-top: 10rem; /* Add some padding */
+        color: var(--color-5);
+        /* Ensure text contrasts with the background */
+        text-align: center;
+        /* Center align text */
+        padding-top: 10rem;
+        /* Add some padding */
         padding-bottom: 10rem;
-        font-size: 1.5rem; /* Adjust font size as needed */
+        font-size: 1.5rem;
+        /* Adjust font size as needed */
     }
 
-    #hero-title{
+    #hero-title {
         font-size: 2.5rem;
         padding-bottom: 0.5rem;
     }
@@ -275,7 +289,7 @@ h2 {
     #hero-subtitle {
         font-size: 0.9em;
         padding-bottom: 1.5rem;
-        
+
     }
 
     #hero-cta-btn {
@@ -289,7 +303,7 @@ h2 {
         text-decoration: none;
         font-size: 1rem;
     }
-    
+
     #hero-cta-btn:hover {
         background-color: var(--cta-btn-hover-color);
     }
@@ -312,7 +326,8 @@ h2 {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 2rem;
         position: relative;
-        padding-bottom: 3rem; /* Space for view more link */
+        padding-bottom: 3rem;
+        /* Space for view more link */
     }
 
     /* Individual card styling */
@@ -343,7 +358,7 @@ h2 {
     }
 
     /* "Includes:" text */
-    .card h3 + :not(ul) {
+    .card h3+ :not(ul) {
         padding: 0 1.5rem;
         color: #666;
         font-size: 0.9rem;
@@ -370,6 +385,17 @@ h2 {
         left: 0;
         color: #999;
     }
+
+    .price-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #f0f0f0;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
 
     /* Button styling */
     .card .button {
@@ -422,7 +448,7 @@ h2 {
     .read-more {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%) ;
+        transform: translateX(-50%);
         text-decoration: none;
         border-radius: 10px;
         padding: 12px;
@@ -492,31 +518,31 @@ h2 {
         margin: 10px;
     }
 
-      .footer-section h4 {
+    .footer-section h4 {
         margin-top: px;
         margin-bottom: 10px;
         font-size: 16px;
     }
 
-      .footer-section p,
-      .footer-section address,
-      .footer-section ul {
+    .footer-section p,
+    .footer-section address,
+    .footer-section ul {
         margin: 0;
         line-height: 1.6;
     }
-                 
-      .footer-section a {
+
+    .footer-section a {
         color: #fff;
         text-decoration: none;
         margin-bottom: 5px;
         line-height: 4ch;
     }
-      
-      .footer-section a:hover {
+
+    .footer-section a:hover {
         text-decoration: underline;
     }
-      
-      .footer-bottom {
+
+    .footer-bottom {
         text-align: center;
         padding: 10px 20px;
         border-top: 1px solid #444;
@@ -532,9 +558,11 @@ h2 {
     }
 
 }
-     
-  /* sm */
-  @media (min-width: 640px) /*640px x 1136px*/ {
+
+/* sm */
+@media (min-width: 640px)
+/*640px x 1136px*/
+    {
     .container {
         max-width: 640px;
     }
@@ -543,7 +571,7 @@ h2 {
         padding: 15em;
     }
 
-    #navigations{
+    #navigations {
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
@@ -555,21 +583,26 @@ h2 {
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.75s ease-out;
     }
-    nav a{
+
+    nav a {
         box-sizing: border-box;
         height: auto;
         width: 100%;
         padding: 20px 30px;
         justify-content: flex-start;
     }
-    .open-sidebar-button, .close-sidebar-button{
+
+    .open-sidebar-button,
+    .close-sidebar-button {
         padding: 20px;
         display: block;
     }
-    #sidebar-active:checked ~ #navigations{
+
+    #sidebar-active:checked~#navigations {
         right: 0;
     }
-    #sidebar-active:checked ~ #overlay{
+
+    #sidebar-active:checked~#overlay {
         height: 100%;
         width: 100%;
         position: fixed;
@@ -587,15 +620,19 @@ h2 {
         background-image: url(../imgs/car-repair/9by16_small_kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
         background-color: rgba(0, 0, 0, 0.473);
 
-        color: var(--color-5); /* Ensure text contrasts with the background */
-        text-align: center; /* Center align text */
-        padding-top: 10rem; /* Add some padding */
+        color: var(--color-5);
+        /* Ensure text contrasts with the background */
+        text-align: center;
+        /* Center align text */
+        padding-top: 10rem;
+        /* Add some padding */
         padding-bottom: 10rem;
-        font-size: 1.5rem; /* Adjust font size as needed */
+        font-size: 1.5rem;
+        /* Adjust font size as needed */
 
     }
 
-    #hero-title{
+    #hero-title {
         font-size: 3.2rem;
         padding-top: 8rem;
         padding-bottom: 0.5rem;
@@ -604,7 +641,7 @@ h2 {
     #hero-subtitle {
         font-size: 1.2em;
         padding-bottom: 1.5rem;
-        
+
     }
 
     #hero-cta-btn {
@@ -618,7 +655,7 @@ h2 {
         text-decoration: none;
         font-size: 1.2rem;
     }
-    
+
     #hero-cta-btn:hover {
         background-color: var(--cta-btn-hover-color);
     }
@@ -632,17 +669,19 @@ h2 {
 
 }
 
-  
-  /* md */
-  @media (min-width: 768px) /*768px x 1280px*/ {
+
+/* md */
+@media (min-width: 768px)
+/*768px x 1280px*/
+    {
     .container {
-      max-width: 768px;
+        max-width: 768px;
     }
 
     #hero-title {
         font-size: 3.5rem;
     }
-    
+
     #hero-subtitle {
         font-size: 2.2rem;
     }
@@ -654,26 +693,30 @@ h2 {
 
     }
 
-  }
-  
-  /* lg */
-  @media (min-width: 1024px) /*1024px x 768px*/ {
+}
+
+/* lg */
+@media (min-width: 1024px)
+/*1024px x 768px*/
+    {
     .container {
-      max-width: 1280px;
-      padding-left: 0;
+        max-width: 1280px;
+        padding-left: 0;
     }
 
     #navbar {
         display: flex;
         align-items: center;
-        justify-content: space-around; /* Spread logo and navigation */
+        justify-content: space-around;
+        /* Spread logo and navigation */
         height: 60px;
     }
 
     #brand-wrapper {
         position: initial;
         display: block;
-        margin: 0; /* Remove any margin adjustments from mobile */
+        margin: 0;
+        /* Remove any margin adjustments from mobile */
         transform: none;
     }
 
@@ -684,29 +727,42 @@ h2 {
         color: var(--text-color-white);
         padding: 14px 28px;
         text-align: center;
-        text-decoration: none; 
+        text-decoration: none;
         margin: 0;
     }
 
     #navigations {
-        flex-direction: row; /* Change navigation to horizontal layout */
-        justify-content: flex-start; /* Align items to the left */
-        align-items: center; /* Center navigation links vertically */
-        position: static; /* Remove fixed positioning for sidebar */
-        width: auto; /* Adjust width */
-        background-color: transparent; /* Remove background for sidebar */
-        box-shadow: none; /* Remove sidebar shadow */
+        flex-direction: row;
+        /* Change navigation to horizontal layout */
+        justify-content: flex-start;
+        /* Align items to the left */
+        align-items: center;
+        /* Center navigation links vertically */
+        position: static;
+        /* Remove fixed positioning for sidebar */
+        width: auto;
+        /* Adjust width */
+        background-color: transparent;
+        /* Remove background for sidebar */
+        box-shadow: none;
+        /* Remove sidebar shadow */
     }
 
     nav a {
-        padding: 1rem 1.9rem; /* Add horizontal spacing between links */
-        height: auto; /* Ensure proper vertical alignment */
-        width: auto; /* Reset from mobile full width */
-        justify-content: center; /* Center align text in links */
+        padding: 1rem 1.9rem;
+        /* Add horizontal spacing between links */
+        height: auto;
+        /* Ensure proper vertical alignment */
+        width: auto;
+        /* Reset from mobile full width */
+        justify-content: center;
+        /* Center align text in links */
     }
 
-    .open-sidebar-button, .close-sidebar-button {
-        display: none; /* Hide hamburger and close button */
+    .open-sidebar-button,
+    .close-sidebar-button {
+        display: none;
+        /* Hide hamburger and close button */
     }
 
     #text-holder {
@@ -718,86 +774,93 @@ h2 {
         background-image: url(../imgs/car-repair/medium_kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
         background-color: rgba(0, 0, 0, 0.473);
 
-        color: var(--color-5); /* Ensure text contrasts with the background */
-        text-align: center; /* Center align text */
-        padding-top: 10rem; /* Add some padding */
+        color: var(--color-5);
+        /* Ensure text contrasts with the background */
+        text-align: center;
+        /* Center align text */
+        padding-top: 10rem;
+        /* Add some padding */
         padding-bottom: 10rem;
-        font-size: 1.5rem; /* Adjust font size as needed */
-        }
-        #hero-title{
-            font-size: 3.5rem;
-            padding-bottom: 0.5rem;
-        }
-
-        #hero-subtitle {
-            font-size: 1.4em;
-            padding-bottom: 1.5rem;
-        }
-
-        #hero-cta-btn {
-            margin-bottom: 12.5rem;
-            background-color: var(--cta-btn-color);
-            border: none;
-            border-radius: 5px;
-            color: var(--text-color-white);
-            padding: 14px 28px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        
-        #hero-cta-btn:hover {
-            background-color: var(--cta-btn-hover-color);
-        }
-
-        #testimonial-card-holder {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .testimonial-card {
-            width: 30%;
-            background-color: var(--gray-1);
-            border-radius: 9px;
-            margin-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .form-grid {
-            display: flex;
-        }
-
-        .submit-button {
-            width: 95.7%;
-            margin-left: 1.2rem;
-            margin-right: 1.2rem;
-            margin-bottom: 2.5rem;
-            background-color: var(--cta-btn-color);
-            border: none;
-            border-radius: 5px;
-            color: var(--text-color-white);
-            padding: 20px 10px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
+        font-size: 1.5rem;
+        /* Adjust font size as needed */
     }
 
-  
-  /* xl */
-  @media (min-width: 1280px) /*1280px x 720px*/ {
+    #hero-title {
+        font-size: 3.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    #hero-subtitle {
+        font-size: 1.4em;
+        padding-bottom: 1.5rem;
+    }
+
+    #hero-cta-btn {
+        margin-bottom: 12.5rem;
+        background-color: var(--cta-btn-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color-white);
+        padding: 14px 28px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    #hero-cta-btn:hover {
+        background-color: var(--cta-btn-hover-color);
+    }
+
+    #testimonial-card-holder {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .testimonial-card {
+        width: 30%;
+        background-color: var(--gray-1);
+        border-radius: 9px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .form-grid {
+        display: flex;
+    }
+
+    .submit-button {
+        width: 95.7%;
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+        margin-bottom: 2.5rem;
+        background-color: var(--cta-btn-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color-white);
+        padding: 20px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+}
+
+
+/* xl */
+@media (min-width: 1280px)
+/*1280px x 720px*/
+    {
     .container {
-      max-width: 1280px;
+        max-width: 1280px;
     }
-    
+
     #brand-wrapper {
         margin: 15px;
         margin-right: 60px;
     }
-    
+
     #contact-us-btn {
         background-color: var(--cta-btn-color);
         border: none;
@@ -805,10 +868,10 @@ h2 {
         color: var(--text-color-white);
         padding: 14px 28px;
         text-align: center;
-        text-decoration: none; 
+        text-decoration: none;
         margin: 0;
     }
-    
+
     #text-holder {
         padding: 0;
         background-repeat: no-repeat;
@@ -818,22 +881,26 @@ h2 {
         background-image: url(../imgs/car-repair/medium_kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
         background-color: rgba(0, 0, 0, 0.473);
 
-        color: var(--color-5); /* Ensure text contrasts with the background */
-        text-align: center; /* Center align text */
-        padding-top: 10rem; /* Add some padding */
+        color: var(--color-5);
+        /* Ensure text contrasts with the background */
+        text-align: center;
+        /* Center align text */
+        padding-top: 10rem;
+        /* Add some padding */
         padding-bottom: 10rem;
-        font-size: 1.5rem; /* Adjust font size as needed */
+        font-size: 1.5rem;
+        /* Adjust font size as needed */
     }
-    
+
     #hero-title {
         font-size: 4rem;
     }
-    
+
     #hero-subtitle {
         font-size: 2.3rem;
         font-weight: 200;
     }
-    
+
     #hero-cta-btn {
         background-color: var(--cta-btn-color);
         border: none;
@@ -844,7 +911,7 @@ h2 {
         text-decoration: none;
         font-size: 1.1rem;
     }
-    
+
     #hero-cta-btn:hover {
         background-color: var(--cta-btn-hover-color);
     }
@@ -858,22 +925,27 @@ h2 {
 }
 
 /* 2xl */
-@media (min-width: 1536px) /*1536px x 864px*/ {
+@media (min-width: 1536px)
+/*1536px x 864px*/
+    {
     .container {
-      max-width: 1536px;
+        max-width: 1536px;
     }
 
     #navbar {
         display: flex;
         align-items: center;
-        justify-content: space-around; /* Spread logo and navigation */
+        justify-content: space-around;
+        /* Spread logo and navigation */
         height: 60px;
     }
 
     #brand-wrapper {
         position: initial;
-        display: block; /* Ensure it's visible */
-        margin: 0; /* Remove any margin adjustments from mobile */
+        display: block;
+        /* Ensure it's visible */
+        margin: 0;
+        /* Remove any margin adjustments from mobile */
         transform: none;
     }
 
@@ -884,48 +956,65 @@ h2 {
         color: var(--text-color-white);
         padding: 14px 28px;
         text-align: center;
-        text-decoration: none; 
+        text-decoration: none;
         margin: 0;
     }
 
     #navigations {
-        flex-direction: row; /* Change navigation to horizontal layout */
-        justify-content: flex-start; /* Align items to the left */
-        align-items: center; /* Center navigation links vertically */
-        position: static; /* Remove fixed positioning for sidebar */
-        width: auto; /* Adjust width */
-        background-color: transparent; /* Remove background for sidebar */
-        box-shadow: none; /* Remove sidebar shadow */
+        flex-direction: row;
+        /* Change navigation to horizontal layout */
+        justify-content: flex-start;
+        /* Align items to the left */
+        align-items: center;
+        /* Center navigation links vertically */
+        position: static;
+        /* Remove fixed positioning for sidebar */
+        width: auto;
+        /* Adjust width */
+        background-color: transparent;
+        /* Remove background for sidebar */
+        box-shadow: none;
+        /* Remove sidebar shadow */
     }
 
     nav a {
-        padding: 1rem 1.9rem; /* Add horizontal spacing between links */
-        height: auto; /* Ensure proper vertical alignment */
-        width: auto; /* Reset from mobile full width */
-        justify-content: center; /* Center align text in links */
+        padding: 1rem 1.9rem;
+        /* Add horizontal spacing between links */
+        height: auto;
+        /* Ensure proper vertical alignment */
+        width: auto;
+        /* Reset from mobile full width */
+        justify-content: center;
+        /* Center align text in links */
     }
 
-    .open-sidebar-button, .close-sidebar-button {
-        display: none; /* Hide hamburger and close button */
+    .open-sidebar-button,
+    .close-sidebar-button {
+        display: none;
+        /* Hide hamburger and close button */
     }
 
     #text-holder {
         padding: 0;
-        background-color: rgba(0, 0, 0, 0.473);        
+        background-color: rgba(0, 0, 0, 0.473);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         background-blend-mode: multiply;
         background-image: url(../imgs/car-repair/kate-ibragimova-bEGTsOCnHro-unsplash.jpg);
 
-        color: var(--text-color-white); /* Ensure text contrasts with the background */
-        text-align: center; /* Center align text */
-        padding-top: 10rem; /* Add some padding */
+        color: var(--text-color-white);
+        /* Ensure text contrasts with the background */
+        text-align: center;
+        /* Center align text */
+        padding-top: 10rem;
+        /* Add some padding */
         padding-bottom: 10rem;
-        font-size: 1.5rem; /* Adjust font size as needed */
-        }
+        font-size: 1.5rem;
+        /* Adjust font size as needed */
+    }
 
-    #hero-title{
+    #hero-title {
         font-size: 4rem;
         padding-bottom: 0.5rem;
     }
@@ -946,7 +1035,7 @@ h2 {
         text-decoration: none;
         font-size: 1rem;
     }
-    
+
     #hero-cta-btn:hover {
         background-color: var(--cta-btn-hover-color);
     }
@@ -959,8 +1048,3 @@ h2 {
     }
 
 }
-
-
-
-
-

@@ -1,126 +1,138 @@
-:root{
-    --color-1: #0A1128;
-    --color-2: #001F54;
-    --color-2_1: #275ebd;
-    --color-3: #034078;
-    --color-4: #1282A2;
-    --color-5: #FEFCFB;
-  
-    --gray-5: #494848;
-    --gray-4: #636363;
-    --gray-3: #909090;
-    --gray-2: #b4b4b4;
-    --gray-1: #d4d4d4;
-  
-    --text-color-black: rgb(0, 0, 0);
-    --text-color-white: rgb(255, 255, 255);
-  
-    --cta-btn-color: rgb(255, 109, 61);
-  
-    --hover-color-on-white: rgb(139, 139, 139);
-    --cta-btn-hover-color: rgb(185, 70, 32);
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+:root {
+  --color-1: #0A1128;
+  --color-2: #001F54;
+  --color-2_1: #275ebd;
+  --color-3: #034078;
+  --color-4: #1282A2;
+  --color-5: #FEFCFB;
+
+  --gray-5: #494848;
+  --gray-4: #636363;
+  --gray-3: #909090;
+  --gray-2: #b4b4b4;
+  --gray-1: #d4d4d4;
+
+  --text-color-black: rgb(0, 0, 0);
+  --text-color-white: rgb(255, 255, 255);
+
+  --cta-btn-color: rgb(255, 109, 61);
+
+  --hover-color-on-white: rgb(139, 139, 139);
+  --cta-btn-hover-color: rgb(185, 70, 32);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /* xs */
-@media (min-width: 10px) /*475px x 812px*/ {
-    .container {
-      max-width: 475px;
-    }
-  
-    .header {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-      background: var(--gray-1);
-      text-align: center;
-      }
-  
-      p {
-          line-height: 3ch;
-      }
-  
-      ul {
-        margin-left: 25px;
-      }
-      
-      li {
-          line-height: 3ch;
-          list-style-position: inside;
-          padding-left: 2rem;
-      }
-  
-      .content-area{
-          padding-top: 2rem;
-          padding-bottom: 2rem;
-      }
-  
-      footer.container {
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      #contact-cta {
-        font-size: 2.5rem;
-      }
-
-      #contact-cta-paragraph {
-        max-width: 500px;
-        margin: 0 auto;
-        justify-content: center;
-      }
+@media (min-width: 10px)
+/*475px x 812px*/
+  {
+  .container {
+    max-width: 475px;
   }
-  
-  /* sm */
-  @media (min-width: 640px) /*640px x 1136px*/ {
-    .container {
-      max-width: 640px;
-    }
-  }
-  
-  /* md */
-  @media (min-width: 768px) /*768px x 1280px*/ {
-    .container {
-      max-width: 768px;
-    }
 
-    #contact-cta-paragraph {
-      max-width: 700px;
-    }
+  .header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: var(--gray-1);
+    text-align: center;
+  }
+
+  p {
+    line-height: 3ch;
+  }
+
+  ul {
+    margin-left: 25px;
+  }
+
+  li {
+    line-height: 3ch;
+    list-style-position: inside;
+    padding-left: 2rem;
+  }
+
+  .content-area {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  footer.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #contact-cta {
+    font-size: 2.5rem;
+  }
+
+  #contact-cta-paragraph {
+    max-width: 500px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+/* sm */
+@media (min-width: 640px)
+/*640px x 1136px*/
+  {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px)
+/*768px x 1280px*/
+  {
+  .container {
+    max-width: 768px;
+  }
+
+  #contact-cta-paragraph {
+    max-width: 700px;
+  }
 
 
-  }
-  
-  /* lg */
-  @media (min-width: 1024px) /*1024px x 768px*/ {
-    .container {
-      max-width: 1024px;
-    }
+}
 
-    #contact-cta-paragraph {
-      max-width: 800px;
-    }
+/* lg */
+@media (min-width: 1024px)
+/*1024px x 768px*/
+  {
+  .container {
+    max-width: 1024px;
+  }
 
+  #contact-cta-paragraph {
+    max-width: 800px;
   }
-  
-  /* xl */
-  @media (min-width: 1280px) /*1280px x 720px*/ {
-    .container {
-      max-width: 1280px;
-    }
+
+}
+
+/* xl */
+@media (min-width: 1280px)
+/*1280px x 720px*/
+  {
+  .container {
+    max-width: 1280px;
   }
-  
-  /* 2xl */
-  @media (min-width: 1536px) /*1536px x 864px*/ {
-    .container {
-      max-width: 1536px;
-    }
+}
+
+/* 2xl */
+@media (min-width: 1536px)
+/*1536px x 864px*/
+  {
+  .container {
+    max-width: 1536px;
   }
+}
