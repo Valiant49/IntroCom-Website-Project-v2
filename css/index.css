@@ -20,6 +20,7 @@
 
     --hover-color-on-white: rgb(139, 139, 139);
     --cta-btn-hover-color: rgb(185, 70, 32);
+
 }
 
 * {
@@ -70,6 +71,11 @@ html {
 }
 
 /*#brand-name { color: var(--text-color);}*/
+
+a {
+    text-decoration: none;
+    color: var(--text-color-white);
+}
 
 nav a {
     height: 100%;
