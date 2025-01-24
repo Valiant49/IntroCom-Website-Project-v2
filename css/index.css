@@ -70,8 +70,6 @@ html {
     align-items: center;
 }
 
-/*#brand-name { color: var(--text-color);}*/
-
 a {
     text-decoration: none;
     color: var(--text-color-white);
